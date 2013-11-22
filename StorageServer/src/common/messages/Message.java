@@ -35,4 +35,12 @@ public class Message implements KVMessage, Serializable {
 		return this.type;
 	}
 
+	@Override
+	public String toString() {
+	    return "Message [key=" + key + ", value=" + value + ", type="
+		    + type + "]";
+	}
+
+	
+	
 }

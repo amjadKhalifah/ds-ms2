@@ -25,7 +25,6 @@ public class SerializationUtil {
 	public static KVMessage toObject(byte[] objectByteStream) {
 
 		String message = new String(objectByteStream);
-		System.out.println("+"+message);
 		String[] tokens = message.split(LINE_FEED);
 		Message retrivedMessage = new Message();
 		// 0: is always the status
@@ -40,7 +39,7 @@ public class SerializationUtil {
 
 		}
 		if (tokens[2] != null) {
-			retrivedMessage.setValue(tokens[2]);
+			retrivedMessage.setValue(tokens[2].trim());
 		}
 		return retrivedMessage;
 	}
